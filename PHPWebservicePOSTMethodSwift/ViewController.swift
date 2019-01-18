@@ -91,7 +91,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         var request = URLRequest(url: url!);
         
-        let strlen = strbody.characters.count;
+        let strlen = strbody.characters.count
         
         let bodydata = strbody.data(using: String.Encoding.utf8);
         
@@ -256,9 +256,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         let dic = arr[indexPath.row] as! [String:Any];
         
-        cell.txid.text = dic["student_id"] as! String;
-        cell.txfn.text = dic["f_name"] as! String;
-        cell.txag.text = dic["age"] as! String;
+        cell.txid.text = dic["student_id"] as? String;
+        cell.txfn.text = dic["f_name"] as? String;
+        cell.txag.text = dic["age"] as? String;
         
         return cell;
     }
